@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'rubik';
+    src: url(./fonts/Rubik/Rubik-VariableFont_wght.ttf);
+}
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--moderate-blue) var(--light-gray);
+}
+
+/* Works on Chrome, Edge, and Safari */
+
+::-webkit-scrollbar{
+    width: 12px;
+    border-radius: .5rem;
+    
+}
+  
+::-webkit-scrollbar-thumb{
+    background-color: hsl(238, 40%, 52%);
+    border-radius: .5rem;
+    border: 3px solid hsl(228, 33%, 97%);
+    transition-property: border;
+    transition-duration: .3s;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+    border: 3px solid hsl(228, 7%, 14%);
+}

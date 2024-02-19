@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="font-rubik">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="output.css">
+    
+    <title>Interactive comments section | Frontend Mentor | devjhex </title>
+
+    <!-- Primary Meta tags. -->
+    <meta
+      name="title" 
+      content="Interactive comments section | Frontend Mentor | devjhex"
+    >
+    <meta
+      name="description" 
+      content="Nested Comment Section using Vanilla JavaScript utilizing MVC and PubSub Design Patterns"
+    >
+    <meta
+      name="author"
+      content="Jonah Ssegawa"
+    >
+    <meta
+      name="keywords"
+      content="Nested comments, MVC pattern, Pub-Sub design pattern, Full-stack CRUD app, Comment and reply system, DOM manipulation, Responsive design, Frontend development, JavaScript project, FrontendMentor project"
+    >
+
+    <!-- Open Graph Metadata -->
+    <!-- Facebook -->  <!-- type, url, title description, image -->
+    <meta
+      property="og:type"
+      content="website"
+    >
+    <!--<meta
+      property="og:url"
+      content="WEBSITE-URL"
+    > -->
+    <meta
+    property="og:title"
+    content="Interactive comments section | Frontend Mentor | devjhex"
+    >
+    <meta
+    property="og:description"
+    content="Nested Comment Section using Vanilla JavaScript utilizing MVC and PubSub Design Patterns"
+    >
+    <!--<meta
+    property="og:image"
+    content="websiteImage"
+    > -->
+
+
+    <!-- Twitter -->
+    <meta
+    property="twitter:card"
+    content="summary"
+    >
+    <meta
+    property="twitter:title"
+    content="Interactive comments section | Frontend Mentor | devjhex"
+    >
+    <meta
+    property="twitter:description"
+    content="Nested Comment Section using Vanilla JavaScript utilizing MVC and PubSub Design Patterns"
+    >
+    <!-- <meta
+    property="twitter:image"
+    content="website-IMAGE"
+    > -->
+    
+  </head>
+  <body class="bg-nueVeryLightGray dark:bg-darkLightGray transition-all  relative flex items-center justify-center duration-[.3s]">
+
+    <main class="absolute top-0 p-4">
+        <div class="comments p-4 md:p-8 flex flex-col max-w-[800px] mx-auto">
+        </div>
+
+        <div class="newCommentInputWrapper px-4 md:px-8 flex flex-col gap-[1rem] max-w-[800px] mx-auto animate-fadeIn">
+          <div class="newCommentInput bg-white dark:bg-darkWhite  p-4 rounded-[.5rem] md:flex md:items-start md:gap-[1rem]">
+            <textarea name="comment" id="newCommentArea" rows="4" class=" w-full resize-none border-2  border-nueLightGray dark:border-darkWhite dark:bg-darkLightGray rounded-[.8rem] p-4 placeholder:text-nueGrayishBlue placeholder:dark:text-darkGrayishBlue placeholder:font-[500] text-nueGrayishBlue dark:text-darkGrayishBlue text-[1.2rem] font-[500] outline-priModerateBlue dark:outline-darkWhite" placeholder="Add a comment..."></textarea>
+            <div class="p-2 flex items-center justify-between md:-order-1">
+        
+              <div>
+                <img src="./images/avatars/image-juliusomo.png" alt="juliusomo" class="w-[45px]">
+              </div>
+              
+        
+              <button class="block md:hidden bg-priModerateBlue dark:bg-darkModerateBlue duration-[.5s] hover:bg-[hsl(221,20%,72%)] text-white py-[.5rem] px-4 w-[100px] rounded-[.5rem] font-[700] uppercase send-btn">
+                Send
+              </button> 
+            </div>
+            <button class="hidden md:block bg-priModerateBlue text-white py-[.5rem] px-4 w-[100px] rounded-[.5rem] font-[700] uppercase send-btn
+            ">
+              Send
+            </button>
+          </div>
+        </div>
+    </main>
+
+    <div class="max-w-[800px] mx-auto absolute top-0 mt-3 w-[95%] flex items-center justify-end mr-[4rem]">
+      <div class="w-[120px] h-[25px] flex items-center justify-center gap-[.5rem]">
+       <div class="w-max h-max">
+        <input type="checkbox" id="checkbox" class="appearance-none transition-all cursor-pointer flex items-center justify-center relative before:transition-all  before:content-[''] before:absolute before:right-full mr-2 before:rounded-full before:bg-black  checked:before:bg-nueVeryLightGray before:w-[2rem] before:h-[1.2rem] after:content-[''] after:transition-all after:absolute after:w-[25px] after:h-[25px] after:rounded-full after:bg-darkModerateBlue after:duration-[.2s] after:-translate-x-full checked:after:-translate-x-0">
+       </div>
+        <label for="checkbox" class="text-darkLightGray  dark:text-nueLightGray transition-all :text-darkLightGray text-[1rem] font-semibold">Dark Mode</label>
+        </div>
+    </div>
+
+    <script src="./src/controller.js" type="module" defer>
+    </script>
+  </body>
+</html>
